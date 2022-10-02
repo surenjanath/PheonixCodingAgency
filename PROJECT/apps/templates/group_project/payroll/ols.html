@@ -1,0 +1,374 @@
+<div class="container mt--8 pb-5">
+  <div class="row justify-content-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container">
+            <h3 class="title text-white mt-3">Order summary</h3>
+            <div class="row">
+              <div class="card">
+                <div class="card-body">
+                  <div class="media align-items-center mb-3">
+                    <div class="col-md-5 col-6">
+                      <img
+                        src="../assets/img/pages/gucci.png"
+                        alt="Rounded image"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="media-body">
+                      <h2 class="h6">Shorts</h2>
+                      <small class="d-block opacity-8">Small</small>
+                    </div>
+                    <div class="media-body text-right">
+                      <span>$29</span>
+                    </div>
+                  </div>
+                  <div class="media align-items-center">
+                    <div class="col-md-5 col-6">
+                      <img
+                        src="../assets/img/pages/jacket.png"
+                        alt="Rounded image"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="media-body">
+                      <h2 class="h6 mb-0">Jacket</h2>
+                    </div>
+                    <div class="media-body text-right">
+                      <span>$999</span>
+                    </div>
+                  </div>
+                  <hr class="line-info mb-3" />
+                  <form class="code-validate">
+                    <label>Discount</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Discount Code"
+                        aria-label="Discount"
+                      />
+                      <div class="input-group-append">
+                        <button type="submit" class="btn btn-info">
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <hr class="line-info mb-3" />
+                  <div class="media align-items-center">
+                    <h3 class="h6 opacity-8 mr-3">Subtotal</h3>
+                    <div class="media-body text-right">
+                      <span>$1038</span>
+                    </div>
+                  </div>
+                  <div class="media align-items-center">
+                    <h3 class="h6 opacity-8 mr-3">Shipping</h3>
+                    <div class="media-body text-right">
+                      <span>$5.8</span>
+                    </div>
+                  </div>
+                  <hr class="line-info mb-3" />
+                  <div class="media align-items-center">
+                    <h3 class="h6">Total</h3>
+                    <div class="media-body text-right">
+                      <span class="font-weight-semi-bold">$1045.8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card">
+            <form class="js-validate">
+              <div class="container">
+                <h3 class="title mt-3">Billing address</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="labels">
+                      First name
+                      <span class="text-danger">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="firstName"
+                      placeholder="Cristopher"
+                      aria-label="Cristopher"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="labels">
+                      Last name
+                      <span class="text-danger">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="lastName"
+                      placeholder="Thompson"
+                      aria-label="Thompson"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="js-form-message">
+                      <label class="labels">
+                        Email address
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="emailAddress"
+                        placeholder="thompson@gmail.com"
+                        aria-label="thompson@gmail.com"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="js-form-message">
+                      <label class="labels"> Phone </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="+4 (0762) 230991"
+                        aria-label="+4 (0762) 230991"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="js-form-message">
+                      <label class="labels">
+                        Street address
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="streetAddress"
+                        placeholder="420 Long Beach, CA"
+                        aria-label="420 Long Beach, CA"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="js-form-message">
+                      <label class="labels">
+                        Postcode/Zip
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="postcode"
+                        placeholder="340112"
+                        aria-label="340112"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="js-form-message mb-4">
+                      <label class="labels"> Apt, suite, etc. </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="YC7B 3UT"
+                        aria-label="YC7B 3UT"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="js-form-message mb-4">
+                      <label class="labels">
+                        City
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="cityAddress"
+                        placeholder="London"
+                        aria-label="London"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="mb-4">
+                      <label class="labels">
+                        Country
+                        <span class="text-danger">*</span>
+                      </label>
+                      <select
+                        class="form-control"
+                        data-trigger=""
+                        name="choices-single-default"
+                        id="choices-single-default"
+                      >
+                        <option selected="">Select country</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="IQ">Iraq</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italy</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MT">Malta</option>
+                        <option value="NO">Norway</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russian Federation</option>
+                        <option value="LC">Saint Lucia</option>
+                        <option value="WS">Samoa</option>
+                        <option value="SM">San Marino</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="ES">Spain</option>
+                        <option value="SZ">Swaziland</option>
+                        <option value="SE">Sweden</option>
+                        <option value="TR">Turkey</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="VN">Viet Nam</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="title">Payment method</h4>
+                <div
+                  class="nav nav-tabs nav-tabs-primary btn-group"
+                  role="tablist"
+                >
+                  <a
+                    class="btn btn-sm btn-outline-info active"
+                    data-toggle="tab"
+                    href="#link1"
+                    role="tablist"
+                  >
+                    Credit Card
+                  </a>
+                  <a
+                    class="btn btn-sm btn-outline-info"
+                    data-toggle="tab"
+                    href="#link2"
+                    role="tablist"
+                  >
+                    PayPal
+                  </a>
+                </div>
+                <div class="tab-content tab-space">
+                  <div id="link1" class="tab-pane active">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="js-form-message">
+                          <label class="form-label"> Card number </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="cardNumber"
+                            placeholder="**** **** **** ***"
+                            aria-label="**** **** **** ***"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="js-form-message mb-4">
+                          <label class="form-label"> Card holder </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="cardHolder"
+                            placeholder="Jack Wayley"
+                            aria-label="Jack Wayley"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="js-form-message mb-4">
+                          <label class="form-label"> Expiration </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="cardExpirationDate"
+                            placeholder="MM/YY"
+                            aria-label="MM/YY"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="js-form-message mb-4">
+                          <label class="form-label"> CVC </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="cardCVC"
+                            placeholder="***"
+                            aria-label="***"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <a href="javascript:;"
+                        ><span class="fas fa-angle-left mr-2"></span> Return to
+                        cart</a
+                      >
+                      <button type="submit" class="btn btn-info btn-sm">
+                        Order now
+                      </button>
+                    </div>
+                  </div>
+                  <div id="link2" class="tab-pane">
+                    <h5 class="text-white">Send payment to:</h5>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name or email"
+                      required=""
+                    />
+                    <br />
+                    <button type="submit" class="btn btn-info btn-sm">
+                      Pay with PayPal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

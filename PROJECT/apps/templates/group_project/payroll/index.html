@@ -1,0 +1,209 @@
+{% extends 'layouts/base-fullscreen.html' %}
+{% load static %}
+{% block title %} Login {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+{% block belowpheonix %}<h1>PAYROLL</h1>{% endblock belowpheonix%}
+{% block content %}
+
+    <!-- Page content -->
+
+    <div class="container mt--8 pb-5">
+      <div class="row justify-content-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="container">
+                <h3 class="title text-white mt-3">Personal Data</h3>
+                <div class="row">
+                  <div class="card">
+                    <div class="card-body">
+      
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="labels">
+                            First name
+                            <span class="text-danger">*</span>
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="firstName"
+                            placeholder="Cristopher"
+                            aria-label="Cristopher"
+                            required=""
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <label class="labels">
+                            Last name
+                            <span class="text-danger">*</span>
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="lastName"
+                            placeholder="Thompson"
+                            aria-label="Thompson"
+                            required=""
+                          />
+                        </div>
+                      </div>
+
+                      <hr class="line-info mb-3" />
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="js-form-message">
+                            <label class="labels">
+                              Email address
+                              <span class="text-danger">*</span>
+                            </label>
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="emailAddress"
+                              placeholder="thompson@gmail.com"
+                              aria-label="thompson@gmail.com"
+                              required=""
+                            />
+                          </div>
+                        </div>
+
+                      </div>
+                      <hr class="line-info mb-3" />
+                      <div class="media align-items-center">
+                        <h3 class="h6 opacity-8 mr-3">Gross Income</h3>
+                        <div class="media-body text-right">
+                          <span>$1038</span>
+                        </div>
+                      </div>
+                      <div class="media align-items-center">
+                        <h3 class="h6 opacity-8 mr-3">Tax</h3>
+                        <div class="media-body text-right">
+                          <span>$5.8</span>
+                        </div>
+                      </div>
+                      <hr class="line-info mb-3" />
+                      <div class="media align-items-center">
+                        <h3 class="h6">Net Income</h3>
+                        <div class="media-body text-right">
+                          <span class="font-weight-semi-bold">$1045.8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card">
+                <form class="js-validate">
+                  <div class="container">
+                    <h3 class="title mt-3">Payroll Data</h3>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="labels">
+                          Monthly Salary
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="labels">
+                          Personal Allowance
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="labels">
+                          Payment Period
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="labels">
+                          Other Allowance
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label class="labels">
+                          Loans
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div>
+                      <div class="col-md-8">
+                        <label class="labels">
+                          Liability [ Bills , Utility, Etc]
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      {% comment %} <div class="col-md-4">
+                        <label class="labels">
+                          Other Allowance
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="labels">
+                          Other Allowance
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" name="lastName" placeholder="10000" aria-label="Thompson" required="" />
+                      </div> {% endcomment %}
+                      <div class="col-md-12">
+                        <div class="mb-12">
+                          <label class="labels">
+                            Salary Payment Frequency
+                            <span class="text-danger">*</span>
+                          </label>
+                          <select
+                            class="form-control"
+                            data-trigger=""
+                            name="choices-single-default"
+                            id="choices-single-default"
+                          >
+                            <option selected="">Select Frequency</option>
+                            
+                            <option value="US">Monthly</option>
+                            <option value="US">Fortnightly</option>
+                            <option value="US">Weekly</option>
+                            <option value="US">Daily</option>
+   
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                   <br><button type="submit" class="btn btn-info btn">Submit Payroll Data</button><br><br>
+                   
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

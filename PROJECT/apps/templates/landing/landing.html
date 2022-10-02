@@ -1,0 +1,137 @@
+{% extends 'layouts/base_landing.html' %}
+{% load static %}
+{% block title %} Landing Page {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+  <!-- Navbar -->
+
+
+
+  <div class="wrapper">
+    <div class="section section-hero section-shaped">
+
+      <div class="page-header">
+        <div class="container shape-container d-flex align-items-center py-small">
+          <div class="col px-0">
+            <div class="row align-items-center justify-content-center">
+              
+              <div class="col-lg-6 text-center">
+                <h1 class="text-white display-2"><img  src="{% static 'assets/img/theme/logo.svg' %}" width="70%"></h1>
+                {% comment %} <h5 class="display-4 font-weight-normal text-white">Consulting Agency</h5> {% endcomment %}
+                {% comment %} <div class="btn-wrapper mt-4">
+                  <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-warning btn-icon mt-3 mb-sm-0">
+                    <span class="btn-inner--icon"><i class="ni ni-button-play"></i></span>
+                    
+                  </a>
+                </div> {% endcomment %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="section features-6">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="info info-horizontal info-hover-primary">
+            </div>
+            <div class="info info-horizontal info-hover-primary mt-5">
+              <div class="description pl-4">
+                <h5 class="title">For Analysis of Data</h5>
+                <p>This service provides an easy way to analyze data. It offers a variety of features that make it easy to understand and use data.</p>
+                <a href="#" class="text-info">Learn more</a>
+              </div>
+            </div>
+            <div class="info info-horizontal info-hover-primary mt-5">
+              <div class="description pl-4">
+                <h5 class="title">For Decision Making</h5>
+                <p>Looking for help to grow your business? Get expert insights from our team of experts to help you make the best decisions for your business.</p>
+                <a href="#" class="text-info">Learn more</a>
+              </div>
+            </div>           
+            <div class="info info-horizontal info-hover-primary mt-5">
+              <div class="description pl-4">
+                <h5 class="title">For Data Visualization</h5>
+                <p>If you're looking for help with data analysis, consulting, or software development, Phoenix Coding is the business for you. We're experts in the field and can help you with whatever you need. Contact us today to get started!</p>
+                <a href="#" class="text-info">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-10 mx-md-auto">
+            <img class="ml-lg-5" src="{% static 'landing/assets/img/ill/ill.png' %}" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <br /><br />
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row row-grid align-items-center mb-5">
+          <div class="col-lg-6">
+            <h3 class="text-primary font-weight-light mb-2">Thank you for visiting us!</h3>
+            <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
+            <br>
+            <div class="card card-raised card-form-horizontal">
+              <div class="card-body">
+                <form method="" action="">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Your Email...">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <button type="button" class="btn btn-primary">Subscribe</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-lg-center btn-wrapper">
+            <button target="_blank" href="https://twitter.com/creativetim" rel="nofollow" class="btn btn-icon-only btn-twitter rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
+              <span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+            </button>
+            <button target="_blank" href="https://www.facebook.com/CreativeTim/" rel="nofollow" class="btn-icon-only rounded-circle btn btn-facebook" data-toggle="tooltip" data-original-title="Like us">
+              <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
+            </button>
+            <button target="_blank" href="https://dribbble.com/creativetim" rel="nofollow" class="btn btn-icon-only btn-dribbble rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
+              <span class="btn-inner--icon"><i class="fa fa-dribbble"></i></span>
+            </button>
+            <button target="_blank" href="https://github.com/creativetimofficial" rel="nofollow" class="btn btn-icon-only btn-github rounded-circle" data-toggle="tooltip" data-original-title="Star on Github">
+              <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
+            </button>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </footer>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+{% endblock javascripts %}
+
+
+
+
+
+
