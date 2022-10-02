@@ -1,37 +1,37 @@
-dj-database-url==1.0.0
-Django==4.1.1
-django-channels==0.7.0
-django-cors-headers==3.13.0
-django-crispy-forms==1.14.0
-django-embed-video==1.4.5
-django-extensions==3.2.0
-django-filter==22.1
-django-js-routes==0.2.0
-django-mathfilters==1.0.0
-django-password-validators==1.7.0
-django-redis==5.2.0
-django-session-timeout==0.1.0
-django-tenants==3.4.5
-Django-Verify-Email==2.0.3
-djangorestframework==3.13.1
+dj-database-url
+Django
+django-channels
+django-cors-headers
+django-crispy-forms
+django-embed-video
+django-extensions
+django-filter
+django-js-routes
+django-mathfilters
+django-password-validators
+django-redis
+django-session-timeout
+django-tenants
+Django-Verify-Email
+djangorestframework
 
-gitdb==4.0.9
-GitPython==3.1.27
-grpcio==1.48.1
-gunicorn==20.1.0
+gitdb
+GitPython
+grpcio
+gunicorn
 
-openai==0.23.1
+openai
 
-Pillow==9.2.0
-pipenv==2022.9.4
-python-dotenv==0.21.0
+Pillow
+pipenv
+python-dotenv
 
-tzdata==2022.2
-tzlocal==4.2
-Unipath==1.1
+tzdata
+tzlocal
+Unipath
 
-virtualenv==20.16.4
-virtualenv-clone==0.5.7
+virtualenv
+virtualenv-clone
 
-whitenoise==6.2.0
+whitenoise
 
