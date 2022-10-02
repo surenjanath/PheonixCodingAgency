@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django.contrib import admin
 from django.urls import path, include  # add this
-import views 
+from core.views import *
 
 
 urlpatterns = [
@@ -20,6 +20,6 @@ urlpatterns = [
     
     
     
-    path("update_server/", views.update, name="update"),        
+    path("update_server/", update, name="update"),        
                 
 ]

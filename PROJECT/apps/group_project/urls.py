@@ -9,7 +9,7 @@ from apps.group_project import views
 urlpatterns = [
 
     # The home page
-    path('', views.payroll_home, name='openai_page'),
+    path('', views.payroll_home, name='payroll'),
     
 
     # Matches any html file
