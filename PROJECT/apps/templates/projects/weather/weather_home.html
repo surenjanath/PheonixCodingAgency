@@ -1,0 +1,175 @@
+{% extends 'layouts/base-fullscreen.html' %}
+{% load static %}
+{% block title %} Login {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="container mt--8 pb-5">
+  <div class="row justify-content-center">
+    <div class="row">
+      <div class="col-lg-5 col-md-7 ml-auto mr-auto">
+        <div class="card card-contact card-raised">
+          <form role="form" id="StormData" method="post">
+            {% csrf_token %}
+            <div class="card-header text-center">
+              <h3 class="card-title">STORM WEATHER TRACKER</h3><br>
+              <h5>You can look up Past and Present Storm Data in the world</h5>
+            </div>
+           
+            <div class="card-body">
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Select Beginning Date</label>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                      </div>
+                      <input class="form-control" name="QueryFrom" placeholder="{{TODAY}}" type="date">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Select Ending Date</label>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                      </div>
+                      <input class="form-control" name="QueryTo"  placeholder="{{TODAY}}" type="date">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="button" id="GetStorms" class="btn btn-icon btn-primary">
+                    <span class="btn-inner--icon"><i class="ni ni-sound-wave"></i></span> 
+                    <span class="btn-inner--text">Retrieve Data</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-5 d-flex justify-content-center flex-column">
+        <div class="card card-contact card-raised">
+          
+            <div class="card-header text-center">
+              <h3 class="card-title">SEARCH RESULTS</h3><br>
+              <h5>Here are the results of your query.</h5>
+            </div>
+           
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 mx-auto">
+                  <div>
+                    <div class="card card-plain">
+                      <div class="card-body">
+                        <div>
+                          <table id="STORM_RESPONSE_TABLE" class="table">
+                            <thead class="text-primary">
+                              <tr>
+                                <th>
+                                  <h3 class="mb-0">Storm</h3>
+                                </th>
+                                <th class="text-center">
+                                  <h3 class="mb-0">Action</h3>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<!--Create Policy Data-->
+<script>
+  $(document).on('click', '#GetStorms',function(e){
+    e.preventDefault();
+    
+    $.ajax({
+        type:'POST',
+        url:'{% url "StormResponse" %}',
+        
+        data:{
+            // Date Info
+            FROM                      :   $('input[name=QueryFrom]').val(),
+            TO                        :   $('input[name=QueryTo]').val(),
+            csrfmiddlewaretoken       :   $('input[name=csrfmiddlewaretoken]').val(),
+            action                    :   'POST',
+        },
+        success:function(json) {
+            console.log(json)
+            $("#STORM_RESPONSE_TABLE tbody tr").remove();
+            
+            
+                 
+            
+            var dictionary_items = json['RESPONSE']['storms']
+  
+            let option = ""; //declare outside
+            for (x in dictionary_items) {
+               
+              //append new htmls inside options
+              option += `<tr><td><h4 class="mb-0">`+dictionary_items[x]+`</h4></td><td class="text-center"><div><a href="javascript:void(0)" data-uuid="dfgdf" class="btn btn-outline-success btn-sm">Choose Storm</a></div></td></tr> `
+
+            }
+            $('#STORM_RESPONSE_TABLE').find('tbody').append(option);
+              
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {% comment %} document.getElementById("PolicyInformationResp").innerHTML = json['success_message'] ; {% endcomment %}
+        },
+        error : function(xhr,errmsg,err) {
+
+        }
+    });
+ })
+</script>
+
+{% endblock javascripts %}

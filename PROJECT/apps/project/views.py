@@ -2,7 +2,7 @@
 
 from django import template
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.template import loader
 from django.urls import reverse
 
@@ -10,14 +10,15 @@ from django.urls import reverse
 
 from django.shortcuts import render, redirect
 from .models import *
-from .aigenerator import *
+# from .aigenerator import *
 from .functions import *
+from .customFunctions import *
 from django.contrib import messages
 from django.conf import settings
-import time
+import datetime
 
 ###########################
-# LANDING PAGE SECTION
+# OPENAI SECTION
 ###########################
 
 def openai_home(request):
@@ -119,3 +120,35 @@ def openai_Web(request):
 #     except:
 #         html_template = loader.get_template('landing/page-500.html')
 #         return HttpResponse(html_template.render(context, request))
+
+
+###########################
+# ZOOM WEATHER SECTION
+###########################
+
+
+
+def weather_home(request):
+    context = {'segment': 'weather home'}
+
+   
+    context['TODAY'] = datetime.datetime.now()
+    print(datetime.datetime.now())
+    if request.method == 'POST':
+        businessName = request.POST['businessName']
+        businessDo = request.POST['businessDo']
+            
+    return render(request, 'projects/weather/weather_home.html', context)
+
+## API WEATHER CALL 
+def StormResponse(request):
+    context = {}
+    FROM = '2000-01-01T18:00Z'
+    TO = '2022-01-01T18:00Z'
+    if request.method == 'POST':
+        FROM = request.POST['FROM']
+        TO = request.POST['TO']
+        print(FROM, TO)
+        context['RESPONSE'] = returnStorm(FROM+'T18:00Z', TO+'T18:00Z')
+            
+    return JsonResponse(context)

@@ -5,7 +5,7 @@ import os
 import openai
 from django.conf import settings
 openai.api_key = settings.OPENAI_API_KEY
-
+import requests
 
 
 
@@ -13,8 +13,6 @@ openai.api_key = settings.OPENAI_API_KEY
 #########################
 # OPEN AI FUNCTIONS
 #########################
-
-
 
 def returnSection1Title(businessDo):
 
@@ -36,8 +34,6 @@ def returnSection1Title(businessDo):
     else:
         return ''
 
-
-
 def returnSection1Description(businessName, businessDo):
     response = openai.Completion.create(
       model="text-davinci-002",
@@ -56,7 +52,6 @@ def returnSection1Description(businessName, businessDo):
             return ''
     else:
         return ''
-
 
 def return3Services(businessDo):
     response = openai.Completion.create(
@@ -79,7 +74,6 @@ def return3Services(businessDo):
     else:
         return ''
 
-
 def returnServiceDescription(title):
     response = openai.Completion.create(
       model="text-davinci-002",
@@ -98,7 +92,6 @@ def returnServiceDescription(title):
             return ''
     else:
         return ''
-
 
 def return3Features(businessDo):
     response = openai.Completion.create(
@@ -121,7 +114,6 @@ def return3Features(businessDo):
     else:
         return ''
 
-
 def returnFeatureDescription(title):
     response = openai.Completion.create(
       model="text-davinci-002",
@@ -142,8 +134,32 @@ def returnFeatureDescription(title):
         return ''
 
 #########################
-# LIBRARIES
+# WEATHER API
 #########################
+
+def returnStorm(FROM, TO):
+    url = 'https://zoom.earth/data/storms'
+ 
+    headers = {
+        'authority': 'zoom.earth',
+        'method': 'GET',
+        'path': f'/data/storms/?date={FROM}&to={TO}',
+        'sec-ch-ua': '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+    }
+    params = {
+        'date': FROM ,
+        'to': TO ,
+    }
+    r = requests.get(url, params=params, headers=headers)
+    if r.status_code == 200 : 
+        return r.json()
+    
+    
+    
+
+
+
 
 
 
